@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 
 public class CapitalizedWords {
     public static void main(String[] args) {
-            String regex = "[A-Z]+[a-zA-Z0-9]{0,}";
+            String regex = "\\b[A-Z]+[a-zA-Z0-9]{0,}";
             Pattern pattern = Pattern.compile(regex);
 
-            String input = "My M Name is samuel";
+            String input = "My M Name is sAmuel";
             Matcher matcher = pattern.matcher(input);
 
             while (matcher.find()) {
